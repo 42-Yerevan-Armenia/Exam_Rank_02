@@ -10,11 +10,3 @@ int	max(int *tab, unsigned int len)
 			max = tab[len];
 		return max;
 }
-
-#include <stdio.h>
-int	main()
-{
-	int	tab[] = {555, 8, 3, -8, 963, 4156845};
-	unsigned int	len = 4;
-	printf("%d", max(tab, len));
-}
