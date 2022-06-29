@@ -3,7 +3,7 @@
 int	main(int argc, char **argv)
 {
 	int	i = 0;
-	int	count = 0;
+	int	count = 0;//of letter a-1 b-2 c-3 ...
 
 	if (argc == 2)
 	{
@@ -16,9 +16,9 @@ int	main(int argc, char **argv)
 			while (count)
 			{
 				write(1, &argv[1][i], 1);
-				count--;
+				count--;//write till count exsist
 			}
-			count = 1;
+			count = 1;//??? maybe delete
 			i++;
 		}
 	}

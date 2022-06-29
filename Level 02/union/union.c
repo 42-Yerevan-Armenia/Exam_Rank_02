@@ -34,25 +34,3 @@ int	main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
-
-// #include <unistd.h>
-
-// int	main(int argc, char **argv)
-// {
-// 	int	set[128] = {0};
-// 	int	i = 0;
-
-// 	while (++i < 3)
-// 	{
-// 		int	j = -1;
-// 		while (argv[i][++j])
-// 		{
-// 			if (!set[argv[i][j]])
-// 			{
-// 				set[argv[i][j]] = 1;
-// 				write(1, &argv[i][j], 1);
-// 			}
-// 		}
-// 	}
-// 	return (0);
-// }

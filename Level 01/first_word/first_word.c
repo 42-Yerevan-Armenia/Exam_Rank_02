@@ -4,13 +4,13 @@ int	main(int argc, char **argv)
 {
 	int	i = 0;
 
-	if (argc == 2)
+	if (argc == 2)// a.out "word"
 	{
-		while (av[1][i] == ' ' || av[1][i] == '\t')
-			i++;
+		while (av[1][i] == ' ' || av[1][i] == '\t')//if there is any space or tab
+			i++;//ignore them
 		while (argv[1][i] != ' ' && argv[1][i] != '\0' && argv[1][i] != '\t')
-		{
-			write(1, &argv[1][i], 1);
+		{//if there is no space, tab and end
+			write(1, &argv[1][i], 1);//write av[1] 
 			i++;
 		}
 	}

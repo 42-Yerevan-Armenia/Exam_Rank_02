@@ -1,13 +1,13 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_write_number(int number)
+void	ft_write_num(int n)
 {
-	char	str[10] = "0123456789";
+	char	str[10] = "0123456789";//take all numbers in aray
 
-	if (number > 9)
-		ft_write_number(number / 10);
-	write (1, &str[number % 10], 1);
+	if (n > 9)
+		ft_write_num(n / 10);//take first index
+	write (1, &str[n % 10], 1);//put second index
 }
 
 int	main()
@@ -23,7 +23,7 @@ int	main()
 		else if (i % 5 == 0)
 			write (1, "buzz", 4);
 		else
-			ft_write_number(i);
+			ft_write_num(i);//put number
 		i++;
 		write (1, "\n", 1);
 	}

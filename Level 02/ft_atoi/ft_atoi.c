@@ -5,7 +5,7 @@ int	ft_atoi(const char *str)
 	int	neg = 1;
 
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\r')
-		i++;
+		i++;//ignore and pass
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')

@@ -1,21 +1,8 @@
 #include <unistd.h>
 
-int		ft_atoi(char *str)
-{
-	int n = 0;
-
-	while (*str >= '0' && *str <= '9')
-	{
-		n *= 10;
-		n += *str - '0';
-		++str;
-	}
-	return (n);
-}
-
 void	ft_putnbr(int n)
 {
-	if (n >= 10)
+	if (n > 9)
 		ft_putnbr(n / 10);
 	char c = (n % 10) + '0';
 	write(1, &c, 1);
@@ -51,9 +38,17 @@ int		add_prime_sum(int n)
 int		main(int argc, char **argv)
 {
 	int n;
+	int	i = 0;
 
-	if (argc == 2 && (n = ft_atoi(argv[1])))
+	if (argc == 2)
+	{
+		while (argv[1][i] != 0)
+		{
+			n = n * 10 + (argv[1][i] - 48);
+			i++;
+		}
 		ft_putnbr(add_prime_sum(n));
+	}
 	else
 		ft_putnbr(0);
 	write(1, "\n", 1);

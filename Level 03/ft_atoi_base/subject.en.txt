@@ -30,3 +30,5 @@ int		main(int ac, char **av)
 		return (0);
 	printf("%d\n", ft_atoi_base(av[1], atoi(av[2])));
 }
+
+https://www.rapidtables.com/convert/number/base-converter.html?x=3-5-4&sel1=8&sel2=10

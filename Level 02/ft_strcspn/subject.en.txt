@@ -1,4 +1,4 @@
-
+j
 Assignment name	: ft_strcspn
 Expected files	: ft_strcspn.c
 Allowed functions: None
@@ -13,11 +13,13 @@ size_t	ft_strcspn(const char *s, const char *reject);
 
 ---------------------------------------------------------------
 
+#include <stdio.h>
+
 int	main()
 {
 	char str[] = "abcDEFghijklmDEFnopqrstuvwxyz";
 	//char fnd[] = "";
 	char fnd[] = "DEF";
-	printf("%s", ft_strstr(str, fnd));
+	printf("%d", ft_strcspn(str, fnd));
 	return (0);
 }

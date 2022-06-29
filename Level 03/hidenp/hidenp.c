@@ -1,31 +1,25 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-	int	i = 0;
-	int	j = 0;
-	int	c = 0;
+	int i = 0;
+	int j = 0;
 
-	if (argc == 3)
+	if (ac == 3)
 	{
-		while (argv[1][i] != '\0')
+		while (av[1][i] != '\0')
 		{
-			while (argv[2][j] != '\0')
+			if (av[1][i] == av[2][j])
+				i++;
+			if (av[2][j] == '\0')
 			{
-				if (argv[1][i] == argv[2][j])
-				{
-					c++;
-					break ;
-				}
-				j++;
+				write(1, "0\n", 2);
+				return(0);
 			}
-			i++;
+			j++;
 		}
-		if (argv[1][c] == '\0')
-			write (1, "1", 1);
-		else
-			write (1, "0", 1);
+		write(1, "1", 1);
 	}
 	write (1, "\n", 1);
-	return 0;
+	return (0);
 }

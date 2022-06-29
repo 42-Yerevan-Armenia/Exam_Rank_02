@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 			{
 				if (argv[1][i] == argv[2][j])
 				{
-					if (check_doubles(argv[1], argv[1][i], i))
+					if (check_doubles(argv[1], argv[1][i], i))//check the same letters
 					{
 						write(1, &argv[1][i], 1);
 						break ;

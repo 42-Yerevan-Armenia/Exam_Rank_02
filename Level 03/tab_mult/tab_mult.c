@@ -1,41 +1,33 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_putnbr(int n)
 {
 	if (n > 9)
-	{
 		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n + 48);
+	char c = (n % 10) + '0';
+	write(1, &c, 1);
 }
 
 int		main(int argc, char **argv)
 {
+	int n;
 	int	i = 0;
 	int	j = 1;
-	int n;
 
 	if (argc == 2)
 	{
-		while (argv[1][i] != 0)
+		while (argv[1][i] != '\0')
 		{
-			n = n * 10 + (argv[1][i] - 48);
+			n = n * 10 + (argv[1][i] - '0');
 			i++;
 		}
 		while (j <= 9)
 		{
-			ft_putnbr(j);
+			ft_putnbr(j); //put 1 to 9
 			write(1, " x ", 3);
-			ft_putnbr(n);
+			ft_putnbr(n); // put av[1] as int
 			write(1, " = ", 3);
-			ft_putnbr(j * n);
+			ft_putnbr(j * n); // do op
 			write(1, "\n", 1);
 			j++;
 		}
