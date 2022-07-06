@@ -16,7 +16,7 @@ int	check_doubles(char *str, char c, int pos)
 int	main(int argc, char **argv)
 {
 	int	i = 0;
-	int	j ;
+	int	j;
 
 	if (argc == 3)
 	{

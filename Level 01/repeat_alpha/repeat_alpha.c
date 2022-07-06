@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 				write(1, &argv[1][i], 1);
 				count--;//write till count exsist
 			}
-			count = 1;//??? maybe delete
+			count = 1;
 			i++;
 		}
 	}

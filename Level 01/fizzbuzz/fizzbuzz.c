@@ -1,13 +1,11 @@
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_write_num(int n)
+void	ft_putnbr(int n)
 {
-	char	str[10] = "0123456789";//take all numbers in aray
-
 	if (n > 9)
-		ft_write_num(n / 10);//take first index
-	write (1, &str[n % 10], 1);//put second index
+		ft_putnbr(n / 10);//take first index
+	char c = (n % 10) + '0';//put second index
+	write(1, &c, 1);
 }
 
 int	main()

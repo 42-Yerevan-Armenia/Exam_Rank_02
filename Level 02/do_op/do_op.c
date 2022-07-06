@@ -11,6 +11,10 @@ int	main(int argc, char **argv)
 
 	if (argc == 4)
 	{
+		// if(av[2][1] == '\0')
+		// {
+		// 	if (av[1][i] != '\0' && av[3][i] != '\0')
+		// 	{
 		if (op == '+')
 			res = num1 + num2;
 		else if (op == '-')
@@ -22,6 +26,8 @@ int	main(int argc, char **argv)
 		else if (op == '%')
 			res = num1 % num2;
 		printf("%d\n", res);
+		// 	}
+		// }
 	}
 	else
 		write(1, "\n", 1);

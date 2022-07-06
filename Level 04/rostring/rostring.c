@@ -25,7 +25,8 @@ void	rostring(char *s)
 			else
 			{
 				// for other words, just write it to stdout (+ one whitespace)
-				while (s[i] && !space(s[i]) && write(1, &s[i++], 1));
+				while (s[i] && !space(s[i])) 
+					write(1, &s[i++], 1);
 				write(1, " ", 1);
 			}
 		}

@@ -7,6 +7,8 @@ char	**ft_split(char *str)
 	int j;
 
 	tab = (char**)malloc(sizeof(char *) * 1000);
+	if (!tab)
+		return (NULL);
 	while (*str)
 	{
 		tab[i] = malloc(1000);

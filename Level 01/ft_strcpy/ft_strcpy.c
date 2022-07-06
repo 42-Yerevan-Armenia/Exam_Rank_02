@@ -1,4 +1,4 @@
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *src, char *dest)
 {
 	int	i = 0;
 

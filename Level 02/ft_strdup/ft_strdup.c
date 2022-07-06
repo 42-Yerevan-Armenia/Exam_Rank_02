@@ -1,14 +1,14 @@
 #include <stdlib.h>
 
-char	*ft_strdup(char *s1)
+char	*ft_strdup(char *src)
 {
 	char	*dup;
 	int		i = 0;
 
-	dup = (char *)malloc(sizeof(*s1) - 1);
-	while (s1[i])
+	dup = (char *)malloc(sizeof(*src) - 1);
+	while (src[i])
 	{
-		dup[i] = s1[i];
+		dup[i] = src[i];
 		i++;
 	}
 	dup[i] = '\0';

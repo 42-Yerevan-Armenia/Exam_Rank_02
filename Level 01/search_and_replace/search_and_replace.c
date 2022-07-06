@@ -8,13 +8,13 @@ int	main(int argc, char **argv)
 	{
 		if (!argv[2][1] && !argv[3][1])//check if index 1 is '\0', if there is 1 letter
 		{
-			while (argv[1][i])
+			while (argv[1][i]!= '\0')
 			{
 				if (argv[1][i] == argv[2][0])//if in str[i] == search[i]
 					write(1, &argv[3][0], 1);//replace and put it
 				else
 					write(1, &argv[1][i], 1);
-				i += 1;
+				i++;
 			}
 		}
 	}
