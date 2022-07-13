@@ -44,7 +44,7 @@ int		main(int argc, char **argv)
 	{
 		while (argv[1][i] != 0)
 		{
-			n = n * 10 + (argv[1][i] - 48);
+			n = n * 10 + (argv[1][i] - '0');
 			i++;
 		}
 		ft_putnbr(add_prime_sum(n));

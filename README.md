@@ -8,6 +8,7 @@ ft_putstr           ft_strdup       pgcd
 first_word      
 rev_print           alpha_mirror    rstr_capitalizer
 search_and_replace  reverse_bits
+ft_swap				swap_bits		str_capitalizer
 
 others
 
@@ -37,7 +38,8 @@ others
 - ft_atoi
 - ft_strcmp
 - ft_strcspn
-- ft_strdup- ft_strpbrk
+- ft_strdup
+- ft_strpbrk
 - ft_strrev
 - ft_strspn
 - inter
@@ -60,10 +62,10 @@ others
 - ft_list_size
 - ft_range
 - ft_rrange
--  - hidenp
--  - lcm
+- hidenp
+- lcm
 - paramsum
-- - pgcd
+- pgcd
 - print_hex
 - rstr_capitalizer
 - str_capitalizer

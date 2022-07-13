@@ -21,7 +21,7 @@ int	main()
 		else if (i % 5 == 0)
 			write (1, "buzz", 4);
 		else
-			ft_write_num(i);//put number
+			ft_putnbr(i);
 		i++;
 		write (1, "\n", 1);
 	}

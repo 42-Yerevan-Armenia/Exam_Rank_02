@@ -1,36 +1,41 @@
 #include <unistd.h>
 
-int main(int ac, char **av)
+void capitalizer(char *str)
 {
-	int i;
-	int j;
+	int i = 0;
 
-	i = 1;
-	j = 0;
-	if (ac >= 2)
+	while (str[i] != '\0')
 	{
-		while (i < ac)
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
+	}
+	i = 0;
+	while (str[i])
+	{
+		if (str[0] >= 'a' && str[i] <= 'z')
+			str[0] -= 32;
+		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] == ' ' || str[i - 1] =='\t'))
+			str[i] -= 32;
+		write (1, &str[i], 1);
+		i++;
+	}
+}
+
+int main (int argc, char **argv)
+{
+	int i = 1;
+
+	if (argc > 1)
+	{
+		while (argv[i])
 		{
-			j = 0;
-			while (av[i][j] != '\0')
-			{
-				if (av[i][j] >= 'a' && av[i][j] <= 'z' &&
-						(av[i][j - 1] == ' ' || av[i][j - 1] == '\t' || av[i][j - 1] == '\0'))
-					 av[i][j] -= 32;
-				else if (av[i][j] >= 'A' && av[i][j] <= 'Z' &&
-                        (av[i][j - 1] == ' ' || av[i][j - 1] == '\t'))
-                     av[i][j] = av[i][j];
-				else if (av[i][j] >= 'A' && av[i][j] <= 'Z' &&
-						(av[i][j - 1] != ' ' || av[i][j - 1] != '\t'))
-					av[i][j] += 32;
-				write(1, &av[i][j], 1);
-				j++;
-			}
+			capitalizer(argv[i]);
+			write (1,"\n",1);
 			i++;
-			write(1, "\n", 1);
 		}
 	}
 	else
-		write(1, "\n", 1);
+		write (1, "\n", 1);
 	return (0);
 }
