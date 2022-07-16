@@ -6,7 +6,7 @@
 Type *examshell* in terminal
 
 - login -> your 42 log
-- pasword -> yout pass
+- pasword -> your pass
 
 Allow photo check
 
