@@ -8,13 +8,13 @@ int	ft_atoi(const char *str)
 		i++;//ignore and pass
 	if (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == '-')
+		if (str[i] == '-')//check the minus
 			neg = -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (str[i] - '0') + (res * 10);
+		res = (str[i] - '0') + (res * 10);//char to int
 		i++;
 	}
 	return (res * neg);

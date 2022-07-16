@@ -6,12 +6,12 @@ char	**ft_split(char *str)
 	int i = 0;
 	int j;
 
-	tab = (char**)malloc(sizeof(char *) * 1000);
+	tab = (char **)malloc(sizeof(char *) * 1000);//1000 is random size
 	if (!tab)
 		return (NULL);
 	while (*str)
 	{
-		tab[i] = malloc(1000);
+		tab[i] = malloc(1000);//1000 is random size
 		while (*str && (*str == ' ' || *str == '\t'))
 			str++;
 		j = 0;

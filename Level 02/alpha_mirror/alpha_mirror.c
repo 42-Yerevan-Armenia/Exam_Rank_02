@@ -7,7 +7,7 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		while (argv[1][i] != '\0')
-		{
+		{//doing some maths
 			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 				argv[1][i] = 'M' - (argv[1][i] - 'N');
 			else if (argv[1][i] >= 'a' && argv[1][i] <= 'z')

@@ -2,8 +2,8 @@
 
 void		rev_wstr(char *s, int first)
 {
-	int		j;
-	int		i = 0;
+	int	i = 0;
+	int	j;
 	if (s[i])
 	{
 		while (s[i] && (s[i] == ' ' || s[i] == '\t'))

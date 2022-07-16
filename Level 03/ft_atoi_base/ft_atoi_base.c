@@ -1,29 +1,43 @@
-int        ft_atoi_base(const char *str, int base)
+char is_lower(char c)
 {
-    int n;
-    int i = 0;
-    int num = 0;
-    int res = 1;
+    if (c >= 'A' && c <= 'Z')
+        return (c + 32);
+    return(c);
+}
 
-    if (!str || (base < 2 || base > 16))
-        return (0);
-    while (str[i] <= 32)
-        i++;
-    if ((str[i] == '-' || str[i] == '+') && str[i++] == '-')
-        res *= -1;
-    while (str[i])
+int digit_in_base(char c, int base)
+{
+    int max = 0;
+
+    if (base <= 10)
+        max = base + '0';
+    else
+        max = base - (10 + 'a');
+
+    if (c >= '0' && c <= '9' && c <= max)
+        return (c - '0');
+    else if (c >= 'a' && c <= 'f' && c <= max)
+        return (10 + c -'a');
+    else
+        return (-1);
+}
+`
+int ft_atoi_base(const char *str, int str_base)
+{
+    int sign = 1;
+    int res = 0;
+    int n;
+    
+    if (*str == '-')
     {
-        n = str[i];
-        if (n >= '0' && n <= '9')
-            n -= '0';
-        else if (n >= 'a' && n <= 'f')
-            n -= 'a' - 10;
-        else if (n >= 'A' && n <= 'F')
-            n -= 'A' - 10;
-        else 
-            return (0);
-        num = num * base + n;
-        i++;
+        sign = -1;
+        str++;
     }
-    return (res * num);
+    while ((n = digit_in_base(is_lower(*str),str_base) >= 0))
+    {
+        res *= str_base;
+        res = res + (n * sign);
+        str++;
+    }
+    return (res);
 }

@@ -7,7 +7,7 @@ void	sort_int_tab(int *tab, unsigned int size)
 	{
 		if (tab[i] > tab[i + 1])
 		{
-			j = tab[i];
+			j = tab[i];//swap
 			tab[i] = tab[i + 1];
 			tab[i + 1] = j;
 			i = -1;

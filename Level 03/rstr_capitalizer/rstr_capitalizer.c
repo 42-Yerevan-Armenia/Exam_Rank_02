@@ -4,7 +4,7 @@ void capitalizer(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (str[i] != '\0')//making all line lowercase
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
@@ -13,9 +13,9 @@ void capitalizer(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == '\0'))
+		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == '\0'))//if lower and next is the end
 			str[i] -= 32;
-		else if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == ' ' || str[i + 1] =='\t'))
+		else if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == ' ' || str[i + 1] =='\t'))//if the next is space or tab
 			str[i] -= 32;
 		write (1, &str[i], 1);
 		i++;

@@ -23,8 +23,8 @@ int main () {
 
    strcpy(str1, "tutorialspoint");
    strcpy(str2, "compileonline");
-
-   puts(str1);
+   printf("\n");
+   ft_putstr(str1);
    puts(str2);
    
    return(0);
