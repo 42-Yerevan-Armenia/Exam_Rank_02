@@ -21,7 +21,7 @@ int digit_in_base(char c, int base)
     else
         return (-1);
 }
-`
+
 int ft_atoi_base(const char *str, int str_base)
 {
     int sign = 1;
