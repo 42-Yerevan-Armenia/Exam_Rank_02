@@ -12,7 +12,6 @@ int	*ft_range(int start, int end)
 	int	size = end - start;
 	int	*i;
 	int	*j;
-	int	n;
 
 	size = abs(size);
 	if (size)
