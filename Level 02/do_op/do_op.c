@@ -7,7 +7,7 @@ int	main(int argc, char **argv)
 	int	num1 = atoi(argv[1]);//for digit
 	int	num2 = atoi(argv[3]);//for digit
 	int	op = argv[2][0];//operator is character
-	int	res;
+	int	res = 0;
 
 	if (argc == 4)
 	{
