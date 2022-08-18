@@ -10,8 +10,8 @@ int		main(int argc, char **argv)
 		{
 			if (argv[1][i] == '_')
 			{
-				i++;//go next, it is upper
-				argv[1][i] -= 32;//change upper to lower
+				i++;//go next, it is lower
+				argv[1][i] -= 32;//change lower to upper
 			}
 			write(1, &argv[1][i], 1);
 			i++;
